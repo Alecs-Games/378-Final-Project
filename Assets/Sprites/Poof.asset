@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10373fffc586f537e92555ece76cd6a8, type: 3}
+  m_Name: Poof
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -2097293300, guid: 233d6ba342d1508f6b6a2b0373a67101, type: 3}
+  - {fileID: 815422981, guid: 233d6ba342d1508f6b6a2b0373a67101, type: 3}
+  - {fileID: 1555671832, guid: 233d6ba342d1508f6b6a2b0373a67101, type: 3}
+  animationSpeed: 0.2
