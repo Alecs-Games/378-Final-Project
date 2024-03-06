@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa0d6465843454a1ca0aa88f76281046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spr: {fileID: 0}
   animIndex: 0
   animations:
   - {fileID: 11400000, guid: fdc61762e9e8bef5790289fa2a821b75, type: 2}
@@ -283,7 +284,7 @@ MonoBehaviour:
   UIImage: 0
   playOnStartIndex: -1
   portrait: {fileID: 0}
-  moveSpeed: 2
+  moveSpeed: 2.75
   walkAnimSpeed: 0.5
   isMoving: 0
   canMove: 1
