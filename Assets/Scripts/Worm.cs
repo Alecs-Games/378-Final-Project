@@ -8,6 +8,7 @@ public class Worm : Enemy
     Coroutine c;
     public float attackDelayTime;
     public float attackDistance;
+    public float patrolSpeed;
 
     [SerializeField]
     CircleCollider2D MouthHole;
@@ -29,10 +30,7 @@ public class Worm : Enemy
     {
         if (c == null)
         {
-            if (g.GetComponent<Humanoid>())
-            {
-                c = StartCoroutine(Chase(g.transform));
-            }
+            c = StartCoroutine(Chase(g.transform));
         }
     }
 
@@ -83,8 +81,8 @@ public class Worm : Enemy
     {
         while (c == null)
         {
-            WormMove(new Vector2(one(), one()), 1f);
-            yield return new WaitForSeconds(0.5f);
+            WormMove(new Vector2(one(), one()), patrolSpeed);
+            yield return new WaitForSeconds(Random.Range(0.2f, 2f));
         }
     }
 

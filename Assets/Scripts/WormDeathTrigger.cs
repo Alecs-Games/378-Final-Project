@@ -8,7 +8,7 @@ public class WormDeathTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.isTrigger && !eating)
+        if ((!other.isTrigger || other.gameObject.GetComponent<Food>()) && !eating)
         {
             StartCoroutine(Consume(other.gameObject));
         }

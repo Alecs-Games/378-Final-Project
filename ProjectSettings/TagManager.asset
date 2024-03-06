@@ -9,6 +9,7 @@ TagManager:
   - Forest
   - ReturnToMap
   - Black
+  - Foliage
   layers:
   - Default
   - TransparentFX

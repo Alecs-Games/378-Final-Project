@@ -48,7 +48,7 @@ MonoBehaviour:
   poofab: {fileID: 8933641552730278816, guid: 533db282181a1bc40a765adbd7e80abe, type: 3}
   player: {fileID: 0}
   playerPrefab: {fileID: 3411158037406557115, guid: 462f6c988e9b7fd9289c3b636f514e21, type: 3}
-  playerResetPosition: {x: 10, y: -7, z: 0}
+  playerResetPosition: {x: 0, y: 0, z: 0}
   useTempPosition: 0
   tempPositionOnLoad: {x: 0, y: 0}
   hearts: {fileID: 0}
