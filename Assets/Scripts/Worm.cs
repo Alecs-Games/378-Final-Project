@@ -6,9 +6,14 @@ public class Worm : Enemy
 {
     bool searching;
     Coroutine c;
+    public float attackDelayTime;
+    public float attackDistance;
 
     [SerializeField]
     CircleCollider2D MouthHole;
+
+    [SerializeField]
+    BoxCollider2D hurtBox;
 
     [SerializeField]
     Collider2D bounds;
@@ -54,19 +59,21 @@ public class Worm : Enemy
     {
         Animate(0, true, 0.2f, true);
         print("Worm Chasing " + target);
-        while (Vector2.Distance(transform.position, target.position) > 0.5f)
+        while (Vector2.Distance(transform.position, target.position) > attackDistance)
         {
             WormMove(target.position - transform.position, 0f);
             yield return new WaitForSeconds(0.3f);
         }
         WormMove(Vector2.zero, 0.5f);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(attackDelayTime);
         Animate(1, false, 0.2f, true);
+        hurtBox.enabled = true;
         yield return new WaitForSeconds(0.2f);
         MouthHole.enabled = true;
         yield return new WaitForSeconds(0.5f);
         MouthHole.enabled = false;
         yield return new WaitForSeconds(1.0f);
+        hurtBox.enabled = false;
         Animate(0, true, 0.25f, true);
         c = null;
         StartCoroutine(Patrol());
