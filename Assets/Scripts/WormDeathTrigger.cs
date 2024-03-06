@@ -22,7 +22,7 @@ public class WormDeathTrigger : MonoBehaviour
             target.transform.position = transform.position;
             foreach (Component c in target.GetComponents<Component>())
             {
-                if (!(c is SpriteRenderer))
+                if (!(c is SpriteRenderer || c is Transform))
                 {
                     Destroy(c);
                 }
