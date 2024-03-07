@@ -284,7 +284,7 @@ MonoBehaviour:
   group: []
   attackDelayTime: 0.4
   attackDistance: 0.5
-  patrolSpeed: 1.5
+  patrolSpeed: 1.2
   MouthHole: {fileID: 3140452326679070689}
   hurtBox: {fileID: 6058762807036653565}
   bounds: {fileID: 0}

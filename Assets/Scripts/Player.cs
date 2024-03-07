@@ -10,6 +10,7 @@ public class Player : Humanoid
     public float forestEncounterRate;
     public Vector2 forestEncounterReturnPos;
     ParticleSystem grassParticles;
+    public string[] randomEncounterScenes;
 
     public void EnterMapMode()
     {
@@ -114,9 +115,9 @@ public class Player : Humanoid
                 {
                     forestEncounterReturnPos = transform.position;
                     GameManager.instance.LoadScene(
-                        "forest-encounter",
+                        randomEncounterScenes[Random.Range(0, randomEncounterScenes.Length - 1)],
                         false,
-                        new Vector2(11, -7.5f)
+                        new Vector2(0f, 0f)
                     );
                 }
             }

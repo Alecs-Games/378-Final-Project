@@ -299,6 +299,10 @@ MonoBehaviour:
   canAttack: 1
   forestEncounterRate: 4
   forestEncounterReturnPos: {x: 0, y: 0}
+  randomEncounterScenes:
+  - forest-encounter
+  - jumpy-encounter
+  - jumpy-encounter
 --- !u!198 &4857507638519930341
 ParticleSystem:
   m_ObjectHideFlags: 0

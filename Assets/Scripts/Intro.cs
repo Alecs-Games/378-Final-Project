@@ -28,26 +28,20 @@ public class Intro : MonoBehaviour
 
     IEnumerator IntroText()
     {
-        text.text = "Princess Aminta's Grand Adventure";
-        yield return StartCoroutine(WaitForKey(KeyCode.Z));
-        text.text = "The Kingdom of Pelesmos was once a peaceful land.";
+        text.text = "Welcome to the early build of Princess Aminta's\nEven Grander Adventure!";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
         text.text =
-            "Princess Aminta ruled over the land with her three pets,\nTina the cat, Glomper the lizard, and Wuff the dog.";
+            "The Evil Blobs are back, and they've brought two\nscary new enemy types with them, with more to come.";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
         text.text =
-            "But one day, the Evil Blobs invaded the land!\n They broke into the palace and kidnapped the princess’s pets!";
+            "They've captured Princess Penelope and her pets,\nso Princess Aminta must travel to a new kingdom to rescue her beloved!";
+        yield return StartCoroutine(WaitForKey(KeyCode.Z));
+        text.text = "This is an extremely early beta version with two locations to visit.";
+        yield return StartCoroutine(WaitForKey(KeyCode.Z));
+        text.text = "Use the arrow keys to move and Z to attack.";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
         text.text =
-            "Determined to save her pets, Princess Aminta sets off\n on a journey across the kingdom.";
-        yield return StartCoroutine(WaitForKey(KeyCode.Z));
-        text.text =
-            "She must brave the forests and explore her kingdom to find\n the three caves where her beloved pets are held captive (Move using arrow keys).";
-        yield return StartCoroutine(WaitForKey(KeyCode.Z));
-        text.text = "She must battle the Evil Blobs by slashing them with her sword (Z).";
-        yield return StartCoroutine(WaitForKey(KeyCode.Z));
-        text.text =
-            "Game by Alec Evans and Emma Sheffo\nFont used - m6x11 by Daniel linssen\nGood luck!";
+            "by Alec Evans, Emma Sheffo, and David Quach\nFont used - m6x11 by Daniel Linssen\nGood luck!";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
         SceneManager.LoadScene("map");
     }

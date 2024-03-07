@@ -91,8 +91,11 @@ public class GameManager : MonoBehaviour
         }
         foreach (GameObject p in pets)
         {
-            p.transform.position = player.transform.position + new Vector3(0, -1f, 0);
-            p.GetComponent<Pet>().OnSceneLoaded();
+            if (p != null)
+            {
+                p.transform.position = player.transform.position + new Vector3(0, -1f, 0);
+                p.GetComponent<Pet>().OnSceneLoaded();
+            }
         }
         StartCoroutine(FadeIn(scene, mode));
     }

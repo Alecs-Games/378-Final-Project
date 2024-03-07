@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: db53056dedace5e528985d545f6008ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dafd82e01a3ed29158083d59457c7070, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spr: {fileID: 0}
+  spr: {fileID: 7328139540822146615}
   animIndex: -1
   animations:
   - {fileID: 11400000, guid: d4e62635b8dd4120796aef966fc4e5cb, type: 2}
@@ -253,6 +253,7 @@ MonoBehaviour:
   shadow: {fileID: 4657641229897252833}
   shadowModifier: {x: 0, y: 0.25, z: 0}
   attack: {fileID: 8325476866039658020}
+  coll: {fileID: 7758753874370101435}
 --- !u!82 &9110253075234969673
 AudioSource:
   m_ObjectHideFlags: 0

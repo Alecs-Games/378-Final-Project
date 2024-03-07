@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/dungeon-alec-wormtest.unity
     guid: 0ff0edc9c72fcc9478b9a21608dce93f
+  - enabled: 1
+    path: Assets/Scenes/jumpy-encounter.unity
+    guid: 3284383591a9bd89ca3a9a1339a4b82c
   m_configObjects: {}

@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class JumpyBoy : NPC
 {
-    bool hiding = true;
     public GameObject hitbox;
     bool inAir;
     public SpriteRenderer shadow;
     Player player;
     public Vector3 shadowModifier;
     public GameObject attack;
+    public BoxCollider2D coll;
+    SpriteRenderer spr;
 
     public new void Start()
     {
+        spr = GetComponent<SpriteRenderer>();
         base.Start();
     }
 
@@ -36,14 +38,17 @@ public class JumpyBoy : NPC
     {
         //gameObject.layer = 10;
         //hitbox.layer = 10;
+        spr.sortingOrder = 3;
+        coll.enabled = false;
         Vector3 groundPosition = transform.position;
         float verticalChange = 0.6f;
         float verticalChangeModifier = -0.02f;
         float height = 0f;
         yield return new WaitForSeconds(0.25f);
-        attack.SetActive(true);
+
         for (int i = 0; i < 60; i++)
-        {
+        { //gameObject.layer = 10;
+            //hitbox.layer = 10;
             groundPosition = Vector3.MoveTowards(groundPosition, target, 0.07f);
             shadow.transform.position = groundPosition - shadowModifier;
             Vector3 ToMove = groundPosition;
@@ -53,8 +58,9 @@ public class JumpyBoy : NPC
             transform.position = ToMove;
             if (i > 55)
             {
-                //gameObject.layer = 0;
-                //hitbox.layer = 0;
+                attack.SetActive(true);
+                coll.enabled = true;
+                spr.sortingOrder = 1;
             }
             yield return new WaitForSeconds(0.03f);
         }

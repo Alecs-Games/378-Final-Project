@@ -82,7 +82,7 @@ public class Worm : Enemy
         while (c == null)
         {
             WormMove(new Vector2(one(), one()), patrolSpeed);
-            yield return new WaitForSeconds(Random.Range(0.2f, 2f));
+            yield return new WaitForSeconds(Random.Range(0.2f, 1f));
         }
     }
 
