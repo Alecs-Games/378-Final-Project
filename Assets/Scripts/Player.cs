@@ -14,13 +14,13 @@ public class Player : Humanoid
 
     public void EnterMapMode()
     {
-        moveSpeed = 2f;
+        //moveSpeed = 3f;
         //canAttack = false;
     }
 
     public void EnterRegularMode()
     {
-        moveSpeed = 2.75f;
+        //moveSpeed = 3f;
         //canAttack = true;
     }
 
