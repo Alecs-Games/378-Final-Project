@@ -5,8 +5,9 @@ using UnityEngine;
 public class TalkingNPC : NPC
 {
     // Start is called before the first frame update
-    void Start() { }
-
-    // Update is called once per frame
-    void Update() { }
+    void Start()
+    {
+        base.Start();
+        SetState(new RoamingNPC_State(new Vector2(1f, 3f)));
+    }
 }
