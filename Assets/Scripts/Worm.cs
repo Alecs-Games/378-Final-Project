@@ -57,7 +57,9 @@ public class Worm : Enemy
     {
         Animate(0, true, 0.2f, true);
         print("Worm Chasing " + target);
-        while (Vector2.Distance(transform.position, target.position) > attackDistance)
+        while (
+            target != null && Vector2.Distance(transform.position, target.position) > attackDistance
+        )
         {
             WormMove(target.position - transform.position, 0f);
             yield return new WaitForSeconds(0.3f);
