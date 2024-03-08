@@ -39,13 +39,13 @@ public class JumpyBoy : NPC
         //gameObject.layer = 10;
         //hitbox.layer = 10;
         spr.sortingOrder = 3;
-        coll.enabled = false;
+
         Vector3 groundPosition = transform.position;
         float verticalChange = 0.6f;
         float verticalChangeModifier = -0.02f;
         float height = 0f;
         yield return new WaitForSeconds(0.25f);
-
+        coll.enabled = false;
         for (int i = 0; i < 60; i++)
         { //gameObject.layer = 10;
             //hitbox.layer = 10;
