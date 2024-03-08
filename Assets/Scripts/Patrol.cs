@@ -45,7 +45,7 @@ public class Patrol : State
 
     public void OnGroupJoined(Enemy newGuy)
     {
-        if (newGuy.isLeader)
+        if (newGuy.isLeader && !((Enemy)parent).isLeader)
         {
             leaderToFollow = newGuy;
         }

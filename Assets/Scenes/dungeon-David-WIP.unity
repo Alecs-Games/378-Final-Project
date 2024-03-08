@@ -3438,6 +3438,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 423086670256682558, guid: 0100c7de6476fd442994643b80f128bc, type: 3}
+      propertyPath: isLeader
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4959801434543882226, guid: 0100c7de6476fd442994643b80f128bc, type: 3}
       propertyPath: m_Name
       value: RollingEnemy (8)
@@ -11848,6 +11852,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 423086670256682558, guid: 0100c7de6476fd442994643b80f128bc, type: 3}
+      propertyPath: isLeader
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4959801434543882226, guid: 0100c7de6476fd442994643b80f128bc, type: 3}
       propertyPath: m_Name
       value: RollingEnemy (10)
