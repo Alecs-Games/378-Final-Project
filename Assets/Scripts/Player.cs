@@ -67,6 +67,22 @@ public class Player : Humanoid
             {
                 StartSwing();
             }
+
+            
+            // Sprinting Code
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                moveSpeed = 4;
+                walkAnimSpeed = 1;
+            }
+            else 
+            {
+                moveSpeed = 3;
+                walkAnimSpeed = 0.5f;
+            }
+
+            
         }
     }
 
@@ -91,8 +107,11 @@ public class Player : Humanoid
         }
     }
 
+    
     private void OnTriggerStay2D(Collider2D other)
     {
+
+        
         if (other.gameObject.CompareTag("Forest"))
         {
             if (grassParticles.isPlaying)
@@ -137,7 +156,11 @@ public class Player : Humanoid
 
     void StartSwing()
     {
-        AttackAnimation(0.05f);
+        // Attacks only permitted if not sprinting
+        if (!Input.GetKey(KeyCode.LeftShift))
+        {
+            AttackAnimation(0.05f);
+        }
     }
 
     GameObject GetClosest(List<GameObject> targets)
