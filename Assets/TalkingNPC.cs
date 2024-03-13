@@ -8,6 +8,8 @@ public class TalkingNPC : NPC
     bool talking = false;
     public bool wandering;
     public TextMeshPro text;
+    public string[] dialogueBank;
+    int currDialogueIndex = 0;
 
     // Start is called before the first frame update
     new void Start()
@@ -17,6 +19,10 @@ public class TalkingNPC : NPC
         {
             SetState(new RoamingNPC_State(new Vector2(1f, 3f)));
         }
+        else
+        {
+            Animate(0, true, 0.4f, true);
+        }
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)
@@ -24,18 +30,24 @@ public class TalkingNPC : NPC
         base.OnTriggerEnter2D(other);
         if (other.gameObject.CompareTag("Player"))
         {
-            print("player Spotted");
+            //print("player Spotted");
             if (!talking)
             {
-                StartCoroutine(Talk());
+                StartCoroutine(Talk(dialogueBank[currDialogueIndex]));
+                currDialogueIndex += 1;
+                if (currDialogueIndex > dialogueBank.Length - 1)
+                {
+                    currDialogueIndex = 0;
+                }
             }
         }
     }
 
-    public IEnumerator Talk()
+    public IEnumerator Talk(string line)
     {
         talking = true;
         text.enabled = true;
+        text.text = line;
         yield return new WaitForSeconds(3f);
         text.enabled = false;
         talking = false;

@@ -11,11 +11,11 @@ public class JumpyBoy : NPC
     public Vector3 shadowModifier;
     public GameObject attack;
     public BoxCollider2D coll;
-    SpriteRenderer spr;
+    SpriteRenderer sprite;
 
     public new void Start()
     {
-        spr = GetComponent<SpriteRenderer>();
+        sprite = GetComponent<SpriteRenderer>();
         base.Start();
     }
 
@@ -38,7 +38,7 @@ public class JumpyBoy : NPC
     {
         //gameObject.layer = 10;
         //hitbox.layer = 10;
-        spr.sortingOrder = 3;
+        sprite.sortingOrder = 3;
 
         Vector3 groundPosition = transform.position;
         float verticalChange = 0.6f;
@@ -60,7 +60,7 @@ public class JumpyBoy : NPC
             {
                 attack.SetActive(true);
                 coll.enabled = true;
-                spr.sortingOrder = 1;
+                sprite.sortingOrder = 1;
             }
             yield return new WaitForSeconds(0.03f);
         }
