@@ -10,6 +10,7 @@ public class Player : Humanoid
     public float forestEncounterRate;
     public Vector2 forestEncounterReturnPos;
     ParticleSystem grassParticles;
+    ParticleSystem sprintParticles;
     public string[] randomEncounterScenes;
 
     public void EnterMapMode()
@@ -32,7 +33,15 @@ public class Player : Humanoid
         base.Start();
         stateMachine = new StateMachine();
         stateMachine.Initialize(new State(), (Humanoid)this);
-        grassParticles = GetComponent<ParticleSystem>();
+        //grassParticles = GetComponent<ParticleSystem>();
+
+
+        Transform sprintParticleTransform = transform.Find("Sprint Trail");
+        sprintParticles = sprintParticleTransform.GetComponent<ParticleSystem>();
+
+         Transform grassParticleTransform = transform.Find("Tree Trail");
+        grassParticles = grassParticleTransform.GetComponent<ParticleSystem>();
+        
     }
 
     // Update is called once per frame
@@ -68,20 +77,25 @@ public class Player : Humanoid
                 StartSwing();
             }
 
-            
-            // Sprinting Code
 
-            if (Input.GetKey(KeyCode.LeftShift))
+            // Sprinting Code
+            if (Input.GetKey(KeyCode.LeftShift) && !sprintParticles.isPlaying)
             {
+                sprintParticles.Play();
+
                 moveSpeed = 4;
                 walkAnimSpeed = 1;
             }
-            else 
+            else if (!Input.GetKey(KeyCode.LeftShift) && sprintParticles.isPlaying)
             {
+                sprintParticles.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+
                 moveSpeed = 3;
                 walkAnimSpeed = 0.5f;
             }
 
+
+            
             
         }
     }
@@ -103,7 +117,7 @@ public class Player : Humanoid
     {
         if (other.gameObject.CompareTag("Forest") && grassParticles.isPlaying)
         {
-            grassParticles.Stop(false, ParticleSystemStopBehavior.StopEmittingAndClear);
+            grassParticles.Stop(false, ParticleSystemStopBehavior.StopEmitting);
         }
     }
 
