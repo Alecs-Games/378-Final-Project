@@ -68,7 +68,6 @@ public class Player : Humanoid
                 StartSwing();
             }
 
-            
             // Sprinting Code
 
             if (Input.GetKey(KeyCode.LeftShift))
@@ -76,13 +75,11 @@ public class Player : Humanoid
                 moveSpeed = 4;
                 walkAnimSpeed = 1;
             }
-            else 
+            else
             {
                 moveSpeed = 3;
                 walkAnimSpeed = 0.5f;
             }
-
-            
         }
     }
 
@@ -107,11 +104,8 @@ public class Player : Humanoid
         }
     }
 
-    
     private void OnTriggerStay2D(Collider2D other)
     {
-
-        
         if (other.gameObject.CompareTag("Forest"))
         {
             if (grassParticles.isPlaying)

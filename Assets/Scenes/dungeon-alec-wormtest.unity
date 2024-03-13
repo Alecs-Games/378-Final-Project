@@ -560,7 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: map
   map: 1
-  startLocation: {x: 20, y: 30}
+  startLocation: {x: 25, y: 64}
 --- !u!4 &396575958
 Transform:
   m_ObjectHideFlags: 0
