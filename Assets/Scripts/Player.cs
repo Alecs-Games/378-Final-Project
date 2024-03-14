@@ -11,6 +11,7 @@ public class Player : Humanoid
     public Vector2 forestEncounterReturnPos;
     ParticleSystem grassParticles;
     public string[] randomEncounterScenes;
+    public bool sprinting;
 
     public void EnterMapMode()
     {
@@ -72,13 +73,20 @@ public class Player : Humanoid
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                moveSpeed = 4;
-                walkAnimSpeed = 1;
+                if (!sprinting)
+                {
+                    moveSpeed = 4;
+                    walkAnimSpeed = 0.2f;
+                    sprinting = true;
+                    SetAnimation(currDirection, true);
+                }
             }
-            else
+            else if (sprinting)
             {
-                moveSpeed = 3;
+                sprinting = false;
+                moveSpeed = 2.5f;
                 walkAnimSpeed = 0.5f;
+                SetAnimation(currDirection, moving);
             }
         }
     }
