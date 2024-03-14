@@ -2679,7 +2679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7496786603137929937, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
       propertyPath: dialogueBank.Array.data[2]
-      value: With my goods, you can rescue Princess Aminta!
+      value: With my goods, you can rescue Princess Penelope!
       objectReference: {fileID: 0}
     - target: {fileID: 7759278183596691885, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
       propertyPath: m_Name
