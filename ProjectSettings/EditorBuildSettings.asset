@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/dungeon-lizard.unity
     guid: 996b8a88ea0c634b793845ae56786a3a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/dungeon-dog.unity
     guid: 21aa2d822b37a5c0ab66b61417d03025
   - enabled: 1
@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/jumpy-encounter.unity
     guid: 3284383591a9bd89ca3a9a1339a4b82c
+  - enabled: 1
+    path: Assets/Scenes/shop1.unity
+    guid: 7a9bb5f42ae5cc6bf92d7ad949078f27
   m_configObjects: {}

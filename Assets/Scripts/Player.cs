@@ -12,6 +12,7 @@ public class Player : Humanoid
     ParticleSystem grassParticles;
     ParticleSystem sprintParticles;
     public string[] randomEncounterScenes;
+    public bool sprinting;
 
     public void EnterMapMode()
     {
@@ -77,10 +78,15 @@ public class Player : Humanoid
                 StartSwing();
             }
 
+<<<<<<< HEAD
+=======
+            // Sprinting Code
+>>>>>>> 628de718dcb28f4a4a51758a518fdf06a4015326
 
             // Sprinting Code
             if (Input.GetKey(KeyCode.LeftShift) && !sprintParticles.isPlaying)
             {
+<<<<<<< HEAD
                 sprintParticles.Play();
 
                 moveSpeed = 4;
@@ -91,12 +97,30 @@ public class Player : Humanoid
                 sprintParticles.Stop(false, ParticleSystemStopBehavior.StopEmitting);
 
                 moveSpeed = 3;
-                walkAnimSpeed = 0.5f;
+=======
+                if (!sprinting)
+                {
+                    moveSpeed = 4;
+                    walkAnimSpeed = 0.2f;
+                    sprinting = true;
+                    SetAnimation(currDirection, true);
+                }
             }
+            else if (sprinting)
+            {
+                sprinting = false;
+                moveSpeed = 2.5f;
+>>>>>>> 628de718dcb28f4a4a51758a518fdf06a4015326
+                walkAnimSpeed = 0.5f;
+                SetAnimation(currDirection, moving);
+            }
+<<<<<<< HEAD
 
 
             
             
+=======
+>>>>>>> 628de718dcb28f4a4a51758a518fdf06a4015326
         }
     }
 
@@ -121,11 +145,8 @@ public class Player : Humanoid
         }
     }
 
-    
     private void OnTriggerStay2D(Collider2D other)
     {
-
-        
         if (other.gameObject.CompareTag("Forest"))
         {
             if (grassParticles.isPlaying)

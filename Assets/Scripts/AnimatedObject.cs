@@ -29,7 +29,7 @@ public class AnimatedObject : MonoBehaviour
 
     public void Animate(int index, bool loop, float speed, bool moving)
     {
-        if (index != animIndex && returnAnimation == null)
+        if ((index != animIndex || speed != animSpeed) && returnAnimation == null)
         {
             animIndex = index;
             looping = loop;
@@ -92,13 +92,7 @@ public class AnimatedObject : MonoBehaviour
         bool moving;
         AnimatedObject parent;
 
-        public ReturnAnimationValues(
-            int index,
-            bool loop,
-            float speed,
-            bool moving,
-            AnimatedObject parent
-        )
+        public ReturnAnimationValues(int index, bool loop, float speed, AnimatedObject parent)
         {
             this.index = index;
             this.loop = loop;
