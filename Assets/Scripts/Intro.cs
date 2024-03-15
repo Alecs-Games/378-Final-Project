@@ -31,12 +31,12 @@ public class Intro : MonoBehaviour
         text.text = "Welcome to the early build of Princess Aminta's\nEven Grander Adventure!";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
         text.text =
-            "So far there are three caves to visit\nand the available portion of map has expanded from the last demo.";
-        yield return StartCoroutine(WaitForKey(KeyCode.Z));
-        text.text = "In addition, you can finally \nsprint by holding left shift!";
+            "The Evil Blobs are back, and they've brought two\nscary new enemy types with them, with more to come.";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
         text.text =
-            "You might notice the place where a \nshop will later be, as we plan to include a currency system to upgrade your attacks.";
+            "They've captured Princess Penelope and her pets,\nso Princess Aminta must travel to a new kingdom to rescue her beloved!";
+        yield return StartCoroutine(WaitForKey(KeyCode.Z));
+        text.text = "This is an extremely early beta version with two locations to visit.";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
         text.text = "Use the arrow keys to move and Z to attack.";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));

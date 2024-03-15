@@ -22,7 +22,7 @@ public class Humanoid : AnimatedObject
     public float moveSpeed;
     public float walkAnimSpeed;
     Vector2 lastDirection = new Vector2(0, 0);
-    public Direction currDirection = Direction.up;
+    Direction currDirection = Direction.up;
     public delegate void MoveDelegate(Vector2 movement, float speed);
     public MoveDelegate Move;
     Vector2 vectorDirection;
