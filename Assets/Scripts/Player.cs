@@ -10,7 +10,6 @@ public class Player : Humanoid
     public float forestEncounterRate;
     public Vector2 forestEncounterReturnPos;
     ParticleSystem grassParticles;
-    ParticleSystem sprintParticles;
     public string[] randomEncounterScenes;
 
     public void EnterMapMode()
@@ -33,15 +32,7 @@ public class Player : Humanoid
         base.Start();
         stateMachine = new StateMachine();
         stateMachine.Initialize(new State(), (Humanoid)this);
-        //grassParticles = GetComponent<ParticleSystem>();
-
-
-        Transform sprintParticleTransform = transform.Find("Sprint Trail");
-        sprintParticles = sprintParticleTransform.GetComponent<ParticleSystem>();
-
-         Transform grassParticleTransform = transform.Find("Tree Trail");
-        grassParticles = grassParticleTransform.GetComponent<ParticleSystem>();
-        
+        grassParticles = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -77,26 +68,24 @@ public class Player : Humanoid
                 StartSwing();
             }
 
-
             // Sprinting Code
-            if (Input.GetKey(KeyCode.LeftShift) && !sprintParticles.isPlaying)
-            {
-                sprintParticles.Play();
 
-                moveSpeed = 4;
-                walkAnimSpeed = 1;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                if (!sprinting)
+                {
+                    moveSpeed = 4;
+                    walkAnimSpeed = 0.2f;
+                    sprinting = true;
+                    SetAnimation(currDirection, true);
+                }
             }
-            else if (!Input.GetKey(KeyCode.LeftShift) && sprintParticles.isPlaying)
+            else if (sprinting)
             {
-                sprintParticles.Stop(false, ParticleSystemStopBehavior.StopEmitting);
-
-                moveSpeed = 3;
+                sprinting = false;
+                moveSpeed = 2.5f;
                 walkAnimSpeed = 0.5f;
             }
-
-
-            
-            
         }
     }
 
@@ -117,7 +106,7 @@ public class Player : Humanoid
     {
         if (other.gameObject.CompareTag("Forest") && grassParticles.isPlaying)
         {
-            grassParticles.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+            grassParticles.Stop(false, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
     }
 
