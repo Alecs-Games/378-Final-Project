@@ -12,7 +12,6 @@ public class Player : Humanoid
     ParticleSystem grassParticles;
     ParticleSystem sprintParticles;
     public string[] randomEncounterScenes;
-    public bool sprinting;
 
     public void EnterMapMode()
     {
@@ -93,7 +92,6 @@ public class Player : Humanoid
 
                 moveSpeed = 3;
                 walkAnimSpeed = 0.5f;
-                SetAnimation(currDirection, moving);
             }
 
 
@@ -123,8 +121,11 @@ public class Player : Humanoid
         }
     }
 
+    
     private void OnTriggerStay2D(Collider2D other)
     {
+
+        
         if (other.gameObject.CompareTag("Forest"))
         {
             if (grassParticles.isPlaying)
