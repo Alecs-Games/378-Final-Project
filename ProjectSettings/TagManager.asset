@@ -10,6 +10,8 @@ TagManager:
   - ReturnToMap
   - Black
   - Foliage
+  - Coin
+  - CoinDisplay
   layers:
   - Default
   - TransparentFX

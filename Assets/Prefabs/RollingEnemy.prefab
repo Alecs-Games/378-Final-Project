@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec26c8b94f877bd338d5973eda4c7635, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spr: {fileID: 0}
   animIndex: 0
   animations:
   - {fileID: 11400000, guid: a769f1db29fdfd38d984abd1ca202536, type: 2}
@@ -266,6 +267,7 @@ MonoBehaviour:
   portrait: {fileID: 0}
   moveSpeed: 1
   walkAnimSpeed: 0
+  currDirection: 0
   isMoving: 0
   canMove: 0
   meleeAttack: {fileID: 0}
@@ -277,6 +279,9 @@ MonoBehaviour:
   injured: 0
   isLeader: 0
   group: []
+  drops:
+  - {fileID: 6979071341631425712, guid: 38c5ba6970543bc5bb46e3efb50ec9ad, type: 3}
+  dropChance: 100
   target: {fileID: 0}
 --- !u!58 &305574234028345314
 CircleCollider2D:

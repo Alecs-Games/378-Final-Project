@@ -6,6 +6,8 @@ public class Enemy : NPC
 {
     public bool isLeader;
     public List<GameObject> group;
+    public List<GameObject> drops;
+    public int dropChance;
 
     public new void Start()
     {
@@ -46,6 +48,20 @@ public class Enemy : NPC
         }
     }
     #endregion
+    public override IEnumerator Die()
+    {
+        if (Random.Range(0, 100) < dropChance)
+        {
+            print("instantiating coin");
+            Instantiate(
+                drops[Random.Range(0, drops.Count - 1)],
+                transform.position,
+                Quaternion.identity
+            );
+        }
+        StartCoroutine(base.Die());
+        yield return new WaitForSeconds(0.1f);
+    }
 
     public virtual void OnPlayerSpotted(GameObject player) { }
 }

@@ -165,7 +165,7 @@ public class Humanoid : AnimatedObject
         }
     }
 
-    public IEnumerator Die()
+    public virtual IEnumerator Die()
     {
         Instantiate(GameManager.instance.poofab, transform.position, Quaternion.identity);
         Destroy(gameObject);

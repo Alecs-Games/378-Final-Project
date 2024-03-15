@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,6 +20,7 @@ public class GameManager : MonoBehaviour
     public bool catRescued;
     public bool dogRescued;
     public AudioSource audi;
+    public TextMeshPro coinsCount;
 
     // Start is called before the first frame update
     void Awake()
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(player.gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
             FindHearts();
+            FindCoinDisplay();
             audi = GetComponent<AudioSource>();
         }
         else
@@ -84,6 +87,7 @@ public class GameManager : MonoBehaviour
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         FindHearts();
+        FindCoinDisplay();
         if (useTempPosition)
         {
             player.transform.position = tempPositionOnLoad;
@@ -133,6 +137,11 @@ public class GameManager : MonoBehaviour
     void FindHearts()
     {
         hearts = GameObject.FindGameObjectWithTag("Hearts").GetComponent<Hearts>();
+    }
+
+    void FindCoinDisplay()
+    {
+        coinsCount = GameObject.FindGameObjectWithTag("CoinDisplay").GetComponent<TextMeshPro>();
     }
 
     void Update()

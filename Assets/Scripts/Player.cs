@@ -13,6 +13,7 @@ public class Player : Humanoid
     public TrailRenderer sprintParticles;
     public string[] randomEncounterScenes;
     public bool sprinting;
+    public int coins;
 
     public void EnterMapMode()
     {
@@ -110,6 +111,12 @@ public class Player : Humanoid
         if (other.gameObject.CompareTag("ReturnToMap"))
         {
             GameManager.instance.LoadScene("map", true, forestEncounterReturnPos);
+        }
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            Destroy(other.gameObject);
+            coins++;
+            GameManager.instance.coinsCount.text = "" + coins;
         }
     }
 
