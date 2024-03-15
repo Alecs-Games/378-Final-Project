@@ -198,7 +198,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4400bd52b302dbbe48a4210a51a8b8bc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c22cc4a0b72d96a11ae8ce8e9d8e59e6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: map
   map: 1
-  startLocation: {x: 20, y: 30}
+  startLocation: {x: 25, y: 64}
 --- !u!4 &396575958
 Transform:
   m_ObjectHideFlags: 0
@@ -66404,6 +66404,78 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0100c7de6476fd442994643b80f128bc, type: 3}
+--- !u!1001 &2079443576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6340071383571800251, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340071383571800251, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340071383571800251, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340071383571800251, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340071383571800251, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340071383571800251, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340071383571800251, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340071383571800251, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340071383571800251, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6340071383571800251, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496786603137929937, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: dialogueBank.Array.data[0]
+      value: I can hear the worm...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496786603137929937, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: dialogueBank.Array.data[1]
+      value: Be careful!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7496786603137929937, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: dialogueBank.Array.data[2]
+      value: It's drum sand...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759278183596691885, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      propertyPath: m_Name
+      value: NPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 430130111080715115, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: c7f515dcac1707bc5901be10ed912070, type: 3}
 --- !u!1001 &2101340418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66487,3 +66559,4 @@ SceneRoots:
   - {fileID: 699050326}
   - {fileID: 1588164919}
   - {fileID: 1300263433}
+  - {fileID: 2079443576}
