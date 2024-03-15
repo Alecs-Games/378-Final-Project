@@ -9,9 +9,10 @@ public class Player : Humanoid
     public bool canAttack;
     public float forestEncounterRate;
     public Vector2 forestEncounterReturnPos;
-    ParticleSystem grassParticles;
-    ParticleSystem sprintParticles;
+    public ParticleSystem grassParticles;
+    public TrailRenderer sprintParticles;
     public string[] randomEncounterScenes;
+    public bool sprinting;
 
     public void EnterMapMode()
     {
@@ -36,12 +37,11 @@ public class Player : Humanoid
         //grassParticles = GetComponent<ParticleSystem>();
 
 
-        Transform sprintParticleTransform = transform.Find("Sprint Trail");
-        sprintParticles = sprintParticleTransform.GetComponent<ParticleSystem>();
+        //Transform sprintParticleTransform = transform.Find("Sprint Trail");
+        //sprintParticles = sprintParticleTransform.GetComponent<ParticleSystem>();
 
-         Transform grassParticleTransform = transform.Find("Tree Trail");
-        grassParticles = grassParticleTransform.GetComponent<ParticleSystem>();
-        
+        //Transform grassParticleTransform = transform.Find("Tree Trail");
+        //grassParticles = grassParticleTransform.GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -77,26 +77,26 @@ public class Player : Humanoid
                 StartSwing();
             }
 
-
             // Sprinting Code
-            if (Input.GetKey(KeyCode.LeftShift) && !sprintParticles.isPlaying)
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                sprintParticles.Play();
-
-                moveSpeed = 4;
-                walkAnimSpeed = 1;
+                if (!sprinting)
+                {
+                    //sprintParticles.emitting = true;
+                    moveSpeed = 4;
+                    walkAnimSpeed = 0.2f;
+                    sprinting = true;
+                    SetAnimation(currDirection, true);
+                }
             }
-            else if (!Input.GetKey(KeyCode.LeftShift) && sprintParticles.isPlaying)
+            else if (sprinting)
             {
-                sprintParticles.Stop(false, ParticleSystemStopBehavior.StopEmitting);
-
-                moveSpeed = 3;
+                //sprintParticles.emitting = false;
+                sprinting = false;
+                moveSpeed = 2.5f;
                 walkAnimSpeed = 0.5f;
+                SetAnimation(currDirection, moving);
             }
-
-
-            
-            
         }
     }
 
@@ -121,11 +121,8 @@ public class Player : Humanoid
         }
     }
 
-    
     private void OnTriggerStay2D(Collider2D other)
     {
-
-        
         if (other.gameObject.CompareTag("Forest"))
         {
             if (grassParticles.isPlaying)
