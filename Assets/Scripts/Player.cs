@@ -112,12 +112,18 @@ public class Player : Humanoid
         {
             GameManager.instance.LoadScene("map", true, forestEncounterReturnPos);
         }
-        if (other.gameObject.CompareTag("Coin"))
+        /*if (other.gameObject.CompareTag("Coin"))
         {
             Destroy(other.gameObject);
             coins++;
             GameManager.instance.coinsCount.text = "" + coins;
-        }
+        }*/
+    }
+
+    public void GetCoin()
+    {
+        coins++;
+        GameManager.instance.coinsCount.text = "" + coins;
     }
 
     void OnTriggerExit2D(Collider2D other)

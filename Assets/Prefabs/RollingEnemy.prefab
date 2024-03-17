@@ -281,7 +281,8 @@ MonoBehaviour:
   group: []
   drops:
   - {fileID: 6979071341631425712, guid: 38c5ba6970543bc5bb46e3efb50ec9ad, type: 3}
-  dropChance: 100
+  - {fileID: 3764287223202100172, guid: bfcf710b833d81b138d02d5eb2f3dec0, type: 3}
+  dropChance: 50
   target: {fileID: 0}
 --- !u!58 &305574234028345314
 CircleCollider2D:
