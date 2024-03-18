@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     public bool dogRescued;
     public AudioSource audi;
     public TextMeshPro coinsCount;
+    public bool shoeUpgradeAvailable;
+    public bool swordUpgradeAvailable;
 
     // Start is called before the first frame update
     void Awake()
@@ -106,9 +108,11 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator FadeIn(Scene scene, LoadSceneMode mode)
     {
+        print("starting fade in");
         SpriteRenderer black = GameObject
             .FindGameObjectWithTag("Black")
             .GetComponent<SpriteRenderer>();
+        print(black);
         black.enabled = true;
         black.color = new Color(black.color.r, black.color.g, black.color.b, 1);
         while (black.color.a > 0f)
@@ -121,6 +125,7 @@ public class GameManager : MonoBehaviour
             );
             yield return new WaitForSeconds(0.05f);
         }
+        print("ending fade in");
         black.enabled = false;
         Pause(false);
         if (lizardRescued && dogRescued && catRescued)
@@ -142,6 +147,7 @@ public class GameManager : MonoBehaviour
     void FindCoinDisplay()
     {
         coinsCount = GameObject.FindGameObjectWithTag("CoinDisplay").GetComponent<TextMeshPro>();
+        coinsCount.text = "" + player.coins;
     }
 
     void Update()

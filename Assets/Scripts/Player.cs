@@ -14,6 +14,9 @@ public class Player : Humanoid
     public string[] randomEncounterScenes;
     public bool sprinting;
     public int coins;
+    public GameObject upgradedAttackPrefab;
+    public float sprintSpeed;
+    public float upgradedSprintSpeed;
 
     public void EnterMapMode()
     {
@@ -83,8 +86,7 @@ public class Player : Humanoid
             {
                 if (!sprinting)
                 {
-                    //sprintParticles.emitting = true;
-                    moveSpeed = 4;
+                    moveSpeed = sprintSpeed;
                     walkAnimSpeed = 0.2f;
                     sprinting = true;
                     SetAnimation(currDirection, true);
@@ -122,8 +124,29 @@ public class Player : Humanoid
 
     public void GetCoin()
     {
-        coins++;
+        AddCoins(1);
+    }
+
+    public void AddCoins(int change)
+    {
+        coins += change;
         GameManager.instance.coinsCount.text = "" + coins;
+    }
+
+    public void ApplyUpgrade(string type)
+    {
+        if (type == "sword")
+        {
+            meleeAttack = upgradedAttackPrefab;
+        }
+        else if (type == "shoe")
+        {
+            sprintSpeed = upgradedSprintSpeed;
+        }
+        else if (type == "potion")
+        {
+            UpdateHealth(maxHealth - health);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)

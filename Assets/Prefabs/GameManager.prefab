@@ -58,6 +58,9 @@ MonoBehaviour:
   catRescued: 0
   dogRescued: 0
   audi: {fileID: 0}
+  coinsCount: {fileID: 0}
+  shoeUpgradeAvailable: 1
+  swordUpgradeAvailable: 1
 --- !u!82 &9164276180879202591
 AudioSource:
   m_ObjectHideFlags: 0

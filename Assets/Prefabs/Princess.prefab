@@ -307,6 +307,10 @@ MonoBehaviour:
   - jumpy-encounter
   - jumpy-encounter
   sprinting: 0
+  coins: 0
+  upgradedAttackPrefab: {fileID: 1652560123824599130, guid: 00df146191e9d1aa79f6eedc546f74ef, type: 3}
+  sprintSpeed: 4
+  upgradedSprintSpeed: 6
 --- !u!82 &5640775425104942861
 AudioSource:
   m_ObjectHideFlags: 0
