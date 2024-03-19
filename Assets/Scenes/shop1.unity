@@ -3272,7 +3272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: map
   map: 1
-  startLocation: {x: 0, y: -14}
+  startLocation: {x: -13, y: -25}
 --- !u!1001 &1395115311
 PrefabInstance:
   m_ObjectHideFlags: 0
