@@ -304,8 +304,12 @@ MonoBehaviour:
   sprintParticles: {fileID: 8341692521479861235}
   randomEncounterScenes:
   - forest-encounter
+  - forest-encounter
+  - forest-encounter
   - jumpy-encounter
   - jumpy-encounter
+  - jumpy-encounter
+  - gnome-encounter
   sprinting: 0
   coins: 0
   upgradedAttackPrefab: {fileID: 1652560123824599130, guid: 00df146191e9d1aa79f6eedc546f74ef, type: 3}
