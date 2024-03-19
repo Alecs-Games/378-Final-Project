@@ -296,7 +296,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.17, y: 0.21}
+    oldSize: {x: 1.0625, y: 1.3125}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -443,8 +443,8 @@ MonoBehaviour:
   spr: {fileID: 0}
   animIndex: -1
   animations:
-  - {fileID: 11400000, guid: a8bad075363dffc65bfaf4e6ae2d7f4a, type: 2}
-  - {fileID: 11400000, guid: a8bad075363dffc65bfaf4e6ae2d7f4a, type: 2}
+  - {fileID: 11400000, guid: 5594762463d830f4683549dd6e0ade0b, type: 2}
+  - {fileID: 11400000, guid: 5594762463d830f4683549dd6e0ade0b, type: 2}
   UIImage: 0
   playOnStartIndex: 1
   portrait: {fileID: 0}
@@ -457,7 +457,7 @@ MonoBehaviour:
   meleeAttackLength: 0
   meleeAttackDistance: 0
   animateToDirection: 0
-  health: -1
+  health: 1
   maxHealth: 3
   injured: 0
   wandering: 0
