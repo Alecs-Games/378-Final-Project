@@ -271,6 +271,7 @@ MonoBehaviour:
   portrait: {fileID: 0}
   moveSpeed: 3.5
   walkAnimSpeed: 0
+  currDirection: 0
   isMoving: 0
   canMove: 0
   meleeAttack: {fileID: 0}
@@ -282,6 +283,9 @@ MonoBehaviour:
   injured: 0
   isLeader: 0
   group: []
+  drops:
+  - {fileID: 6979071341631425712, guid: 38c5ba6970543bc5bb46e3efb50ec9ad, type: 3}
+  dropChance: 100
   attackDelayTime: 0.4
   attackDistance: 0.5
   patrolSpeed: 1.2

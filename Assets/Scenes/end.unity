@@ -287,7 +287,8 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887466094}
-  m_Text: Congratulations! The Princess rescued all the animals!
+  m_Text: "Congulations! Princess Animta rescued Princess Penelope\n from the wrath
+    of the evil blobs!"
   m_OffsetZ: 0
   m_CharacterSize: 0.05
   m_LineSpacing: 1

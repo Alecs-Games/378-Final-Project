@@ -7089,6 +7089,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6424017268671746805, guid: 16e6571171757b804a764f9384706e55, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1520261473}
+    - targetCorrespondingSourceObject: {fileID: 8357265814763348138, guid: 16e6571171757b804a764f9384706e55, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 16e6571171757b804a764f9384706e55, type: 3}
 --- !u!1 &1520261472 stripped
 GameObject:
@@ -7105,7 +7108,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4400bd52b302dbbe48a4210a51a8b8bc, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c22cc4a0b72d96a11ae8ce8e9d8e59e6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

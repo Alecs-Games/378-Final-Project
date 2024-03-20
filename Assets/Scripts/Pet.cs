@@ -92,7 +92,6 @@ public class Pet : NPC
             nearPlayer = true;
         }
         base.OnTriggerEnter2D(other);
-        GameManager.instance.dogRescued = true;
     }
 
     void Activate()
@@ -117,6 +116,8 @@ public class Pet : NPC
         }
         if (!isPenelope)
         {
+            GameManager.instance.AddPet(this.gameObject);
+            GameManager.instance.SavePrincess();
             Destroy(gameObject);
         }
         else

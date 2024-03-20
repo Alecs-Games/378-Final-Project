@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public TextMeshPro coinsCount;
     public bool shoeUpgradeAvailable;
     public bool swordUpgradeAvailable;
+    public bool princessSaved = true;
 
     // Start is called before the first frame update
     void Awake()
@@ -54,6 +55,11 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string name, bool map, Vector2 startLocation)
     {
         StartCoroutine(LoadWithAnimation(name, map, startLocation));
+    }
+
+    public void SavePrincess()
+    {
+        princessSaved = true;
     }
 
     public IEnumerator LoadWithAnimation(string name, bool map, Vector2 startLocation)
@@ -128,10 +134,6 @@ public class GameManager : MonoBehaviour
         print("ending fade in");
         black.enabled = false;
         Pause(false);
-        if (lizardRescued && dogRescued && catRescued)
-        {
-            LoadScene("end", false, Vector2.zero);
-        }
     }
 
     void Pause(bool pause)
@@ -166,7 +168,14 @@ public class GameManager : MonoBehaviour
     IEnumerator ResetGame()
     {
         yield return new WaitForSeconds(3f);
-        SceneManager.LoadScene("Map");
+        if (princessSaved)
+        {
+            SceneManager.LoadScene("tower");
+        }
+        else
+        {
+            SceneManager.LoadScene("Map");
+        }
         player = Instantiate(playerPrefab, playerResetPosition, Quaternion.identity)
             .GetComponent<Player>();
         DontDestroyOnLoad(player.gameObject);
@@ -175,7 +184,5 @@ public class GameManager : MonoBehaviour
     public void AddPet(GameObject pet)
     {
         audi.Play();
-        DontDestroyOnLoad(pet);
-        pets.Add(pet);
     }
 }

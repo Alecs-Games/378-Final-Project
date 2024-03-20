@@ -28,21 +28,29 @@ public class Intro : MonoBehaviour
 
     IEnumerator IntroText()
     {
-        text.text = "Welcome to the early build of Princess Aminta's\nEven Grander Adventure!";
+        text.text =
+            "On her grand adventure in the kingdom of Pelesmos,\n Princess Aminta thwarted the Evil Blobs and rescued her pets.";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
         text.text =
-            "So far there are three caves to visit\nand the available portion of map has expanded from the last demo.";
-        yield return StartCoroutine(WaitForKey(KeyCode.Z));
-        text.text = "In addition, you can finally \nsprint by holding left shift!";
+            "Now, our princess is travelling to the magic kingdom \nof Kelia to embark on the grandest adventure of all... Love!";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
         text.text =
-            "You might notice the place where a \nshop will later be, as we plan to include a currency system to upgrade your attacks.";
+            "Upon arriving at the castle, she learns that her betrothed, \nPrincess Penelope, has been kidnapped!";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
-        text.text = "Use the arrow keys to move and Z to attack.";
+        text.text =
+            "That's right- the Evil Blobs are back, and they've captured\n Princess Penelope and her pets.";
+        yield return StartCoroutine(WaitForKey(KeyCode.Z));
+        text.text =
+            "If you can rescue Penelope's magical pets, they can cast a \nspell to help free their Princess Penelope.";
+        yield return StartCoroutine(WaitForKey(KeyCode.Z));
+        text.text =
+            "Princess Aminta must use the arrow keys to move, hold shift\n to run, and press Z to attack the terrible monsters.";
+        yield return StartCoroutine(WaitForKey(KeyCode.Z));
+        text.text = "Time to save the Kingdom of Kelia!";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
         text.text =
             "by Alec Evans, Emma Sheffo, and David Quach\nFont used - m6x11 by Daniel Linssen\nGood luck!";
         yield return StartCoroutine(WaitForKey(KeyCode.Z));
-        SceneManager.LoadScene("map");
+        SceneManager.LoadScene("castle");
     }
 }

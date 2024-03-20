@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/castle.unity
     guid: c7c8165ae652c4b46b374d7bc124ee13
+  - enabled: 1
+    path: Assets/Scenes/tower.unity
+    guid: cb2ab28ab2bf80241a08f0ff8624452d
+  - enabled: 1
+    path: Assets/Scenes/gnome-encounter.unity
+    guid: f92d92c8d2cc932448f6170b5487bbdd
   m_configObjects: {}
