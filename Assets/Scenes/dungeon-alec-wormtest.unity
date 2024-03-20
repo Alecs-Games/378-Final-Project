@@ -182,6 +182,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6424017268671746805, guid: 16e6571171757b804a764f9384706e55, type: 3}
       insertIndex: -1
       addedObject: {fileID: 41745345}
+    - targetCorrespondingSourceObject: {fileID: 8357265814763348138, guid: 16e6571171757b804a764f9384706e55, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 16e6571171757b804a764f9384706e55, type: 3}
 --- !u!1 &41745344 stripped
 GameObject:
@@ -332,6 +335,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3081072503914607939, guid: fa68b509b70f063d59a08008fd17ced0, type: 3}
+      propertyPath: rescueText
+      value: You have rescued the dog! Bring all 3 pets back to the castle to find
+        Princess Penelope.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081072503914607939, guid: fa68b509b70f063d59a08008fd17ced0, type: 3}
+      propertyPath: rescuedTextPrefab
+      value: 
+      objectReference: {fileID: 821236616849000760, guid: 0e1dbbaf372b1440bb95ed8387ff021a, type: 3}
     - target: {fileID: 6543902236001210338, guid: fa68b509b70f063d59a08008fd17ced0, type: 3}
       propertyPath: m_Name
       value: Dog

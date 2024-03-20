@@ -3700,6 +3700,15 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2725646373206370529, guid: 2897829c8e7b6d4709bc1f4ebea697eb, type: 3}
+      propertyPath: rescueText
+      value: You have rescued the lizard! Bring all 3 pets to the castle to find
+        Princess Penelope.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725646373206370529, guid: 2897829c8e7b6d4709bc1f4ebea697eb, type: 3}
+      propertyPath: rescuedTextPrefab
+      value: 
+      objectReference: {fileID: 821236616849000760, guid: 0e1dbbaf372b1440bb95ed8387ff021a, type: 3}
     - target: {fileID: 3454865262185907376, guid: 2897829c8e7b6d4709bc1f4ebea697eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 40.847157
@@ -3808,6 +3817,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6424017268671746805, guid: 16e6571171757b804a764f9384706e55, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1476906979}
+    - targetCorrespondingSourceObject: {fileID: 8357265814763348138, guid: 16e6571171757b804a764f9384706e55, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 16e6571171757b804a764f9384706e55, type: 3}
 --- !u!1 &1476906978 stripped
 GameObject:

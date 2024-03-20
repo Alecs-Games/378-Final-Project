@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Pet : NPC
@@ -9,6 +10,8 @@ public class Pet : NPC
     public bool isLizard;
     public bool isCat;
     public bool isDog;
+    public GameObject rescuedTextPrefab;
+    public string rescueText;
 
     // Start is called before the first frame update
     new void Start()
@@ -23,9 +26,17 @@ public class Pet : NPC
         {
             Destroy(gameObject);
         }
-        else if (isDog && GameManager.instance.dogRescued)
+        if (isLizard)
         {
-            Destroy(gameObject);
+            GameManager.instance.lizardRescued = true;
+        }
+        else if (isCat)
+        {
+            GameManager.instance.catRescued = true;
+        }
+        else if (isDog)
+        {
+            GameManager.instance.dogRescued = true;
         }
     }
 
@@ -80,10 +91,31 @@ public class Pet : NPC
             nearPlayer = true;
         }
         base.OnTriggerEnter2D(other);
+        GameManager.instance.dogRescued = true;
     }
 
     void Activate()
     {
+        GameObject textObj = Instantiate(
+            rescuedTextPrefab,
+            transform.position + new Vector3(6, 0, 0),
+            Quaternion.identity
+        );
+        textObj.GetComponent<TextMeshPro>().text = rescueText;
+        if (isLizard)
+        {
+            GameManager.instance.lizardRescued = true;
+        }
+        if (isLizard)
+        {
+            GameManager.instance.lizardRescued = true;
+        }
+        else if (isCat)
+        {
+            GameManager.instance.catRescued = true;
+        }
+        Destroy(gameObject);
+        /*
         rescued = true;
         spr.color = Color.white;
         if (isLizard)
@@ -102,6 +134,7 @@ public class Pet : NPC
         GameManager.instance.AddPet(this.gameObject);
         StartCoroutine(PlayerTeleport());
         StartCoroutine(NearPlayerCheck());
+        */
     }
 
     public void OnSceneLoaded()
