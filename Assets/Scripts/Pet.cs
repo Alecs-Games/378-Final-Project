@@ -10,6 +10,7 @@ public class Pet : NPC
     public bool isLizard;
     public bool isCat;
     public bool isDog;
+    public bool isPenelope;
     public GameObject rescuedTextPrefab;
     public string rescueText;
 
@@ -114,7 +115,20 @@ public class Pet : NPC
         {
             GameManager.instance.catRescued = true;
         }
-        Destroy(gameObject);
+        if (!isPenelope)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            spr.color = Color.white;
+            SetState(new FollowPlayer());
+            GameManager.instance.AddPet(this.gameObject);
+            StartCoroutine(PlayerTeleport());
+            StartCoroutine(NearPlayerCheck());
+            rescued = true;
+        }
+
         /*
         rescued = true;
         spr.color = Color.white;

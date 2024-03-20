@@ -7,9 +7,11 @@ public class WormSearch : MonoBehaviour
     void OnTriggerStay2D(Collider2D other)
     {
         if (
-            other.gameObject.GetComponent<Humanoid>()
-            || other.gameObject.GetComponent<Food>()
-            || other.gameObject.CompareTag("Foliage")
+            (
+                other.gameObject.GetComponent<Humanoid>()
+                || other.gameObject.GetComponent<Food>()
+                || other.gameObject.CompareTag("Foliage")
+            ) && !other.gameObject.CompareTag("Pet")
         )
         {
             transform.parent.gameObject.SendMessage("FoodFound", other.gameObject);

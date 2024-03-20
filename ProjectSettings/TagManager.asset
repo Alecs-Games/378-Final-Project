@@ -12,6 +12,7 @@ TagManager:
   - Foliage
   - Coin
   - CoinDisplay
+  - Pet
   layers:
   - Default
   - TransparentFX
