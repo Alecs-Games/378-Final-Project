@@ -285,6 +285,7 @@ MonoBehaviour:
   group: []
   drops:
   - {fileID: 6979071341631425712, guid: 38c5ba6970543bc5bb46e3efb50ec9ad, type: 3}
+  - {fileID: 6979071341631425712, guid: 38c5ba6970543bc5bb46e3efb50ec9ad, type: 3}
   dropChance: 100
   attackDelayTime: 0.4
   attackDistance: 0.5

@@ -177,7 +177,9 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689862996}
-  m_Text: Thanks for Playing!
+  m_Text: '
+
+    Thanks for Playing!'
   m_OffsetZ: 0
   m_CharacterSize: 0.05
   m_LineSpacing: 1
@@ -288,7 +290,7 @@ TextMesh:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887466094}
   m_Text: "Congulations! Princess Animta rescued Princess Penelope\n from the wrath
-    of the evil blobs!"
+    of the evil blobs!\nThey both lived happily ever after."
   m_OffsetZ: 0
   m_CharacterSize: 0.05
   m_LineSpacing: 1

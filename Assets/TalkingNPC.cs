@@ -10,6 +10,7 @@ public class TalkingNPC : NPC
     public TextMeshPro text;
     public string[] dialogueBank;
     int currDialogueIndex = 0;
+    public bool randomizeDialogue;
 
     // Start is called before the first frame update
     new void Start()
@@ -33,6 +34,10 @@ public class TalkingNPC : NPC
             //print("player Spotted");
             if (!talking)
             {
+                if (randomizeDialogue)
+                {
+                    currDialogueIndex = Random.Range(0, dialogueBank.Length);
+                }
                 StartCoroutine(Talk(dialogueBank[currDialogueIndex]));
                 currDialogueIndex += 1;
                 if (currDialogueIndex > dialogueBank.Length - 1)

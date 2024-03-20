@@ -181,7 +181,7 @@ public class Player : Humanoid
                 {
                     forestEncounterReturnPos = transform.position;
                     GameManager.instance.LoadScene(
-                        randomEncounterScenes[Random.Range(0, randomEncounterScenes.Length - 1)],
+                        randomEncounterScenes[Random.Range(0, randomEncounterScenes.Length)],
                         false,
                         new Vector2(0f, 0f)
                     );

@@ -181,6 +181,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(player.gameObject);
     }
 
+    public void InvokeReset(float time)
+    {
+        Invoke("OnPlayerDeath", time);
+    }
+
     public void AddPet(GameObject pet)
     {
         audi.Play();

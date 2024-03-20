@@ -165,12 +165,12 @@ MonoBehaviour:
   m_margin: {x: 5.1622977, y: 2.1449041, z: 6.3229423, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6161631199346238014}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &7759278183596691885
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,3 +466,4 @@ MonoBehaviour:
   - Mime!
   - Meep!
   - Oh Jolly!
+  randomizeDialogue: 1

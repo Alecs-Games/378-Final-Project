@@ -157,6 +157,14 @@ public class Pet : NPC
         nearPlayer = false;
     }
 
+    public void OnDestroy()
+    {
+        if (isPenelope && health <= 0)
+        {
+            GameManager.instance.InvokeReset(1f);
+        }
+    }
+
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && !other.isTrigger)
